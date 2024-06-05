@@ -1,12 +1,20 @@
+"use client";
 import React from "react";
 import { LogoSvg, TimerSvg } from "../assets/svgs/GeneralSvgs";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter();
   return (
     <header className="w-full sticky top-0 left-0 flex items-center justify-center bg-white px-[1.5rem]">
       <div className="w-full max-w-screen-xl flex items-center justify-between py-3">
-        <div className="flex items-center gap-x-[1rem]">
+        <div
+          className="flex items-center gap-x-[1rem] cursor-pointer"
+          onClick={() => {
+            router.push("/");
+          }}
+        >
           <LogoSvg />
           <p className="flex flex-col md:text-[1.25rem] text-[1rem] font-medium leading-none">
             <span>Frontend developer</span>
