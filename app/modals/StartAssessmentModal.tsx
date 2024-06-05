@@ -6,7 +6,7 @@ const StartAssessmentModal = ({ setOpenModal }: { setOpenModal: React.Dispatch<R
   const router = useRouter();
   return (
     <main className="fixed top-0 left-0 w-screen z-[99999] flex flex-col items-center justify-center h-screen bg-black/30">
-      <div className="w-[29.5rem] h-automax-w-[95%]  bg-[#F5F3FF] rounded-2xl overflow-hidden">
+      <div className="w-[29.5rem] h-auto max-w-[95%]  bg-[#F5F3FF] rounded-2xl overflow-hidden">
         <div className="w-full p-[1.5rem] bg-primary flex justify-between items-center">
           <p className="font-medium text-white">Start assessment</p>
           <button
