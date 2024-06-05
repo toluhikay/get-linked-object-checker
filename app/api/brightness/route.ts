@@ -7,6 +7,6 @@ export async function GET(request: NextRequest) {
     const currentBrightness = await brightness.get();
     return NextResponse.json({ messsage: currentBrightness });
   } catch (error) {
-    NextResponse.json({ error: "Could not get brightness" });
+    return NextResponse.json({ error: "Could not get brightness" });
   }
 }
