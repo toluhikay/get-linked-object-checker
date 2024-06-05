@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.log(error);
 
-    return NextResponse.json({ error: "Could not get brightness" });
+    return NextResponse.json({ error: "Could not get brightness", er1: error });
   }
 }
 
