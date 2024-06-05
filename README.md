@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Object Detection with Next.js
 
-## Getting Started
+This project is an object detection application built with Next.js. It leverages the `@tensorflow/tfjs` library for object detection, an internet speed checker for network speed, and a screen brightness checker to determine the device's screen brightness. API routes are utilized to handle various operations.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Introduction
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project demonstrates the implementation of an object detection system using Next.js and TensorFlow.js. Additionally, it includes features to check internet speed and screen brightness of the user's device.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- Object Detection using `@tensorflow/tfjs`
+- Network speed checker
+- Screen brightness checker
+- API routes to handle processing
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To get started with the project, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
 
-## Deploy on Vercel
+   ```sh
+   git clone https://github.com/your-username/object-detection-nextjs.git
+   cd object-detection-nextjs
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```sh
+   npm install
+   ```
+
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## Usage
+
+### Object Detection
+
+The object detection feature uses TensorFlow.js to identify objects within images or video streams.
+
+### Internet Speed Checker
+
+The internet speed checker determines the user's network speed by downloading a sample image and measuring the download time.
+
+### Screen Brightness Checker
+
+This feature measures the screen brightness of the user's device.

@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Get Linked Assessment",
@@ -20,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={""}>
         <Header />
-        {children}
+        <div className="min-h-[80vh]">{children}</div>
         <Footer />
         <div id="portals"></div>
       </body>
