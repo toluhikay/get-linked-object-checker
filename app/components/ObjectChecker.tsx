@@ -72,7 +72,7 @@ const ObjectChecker = () => {
           },
         });
 
-        setScreenBrightness(parseFloat(response?.data?.messsage) * 100);
+        setScreenBrightness(parseFloat(response?.data?.message) * 100);
       } catch (error) {
         console.log(error);
       }
