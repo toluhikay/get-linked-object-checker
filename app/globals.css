@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"); */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --count: 60%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #f8f9fb;
+  /* font-family: "DM Sans Variable"; */
+  /* font-weight: 100 1000; */
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/dm-sans:vf@latest/latin-wght-normal.woff2) format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.text-gray-300 {
+  stroke: #d1d5db; /* Tailwind's gray-300 */
+}
+
+.text-warning-500 {
+  stroke: #ff5f56; /* Tailwind's blue-500 */
+}
+
+.text-weak-500 {
+  stroke: greenyellow; /* Tailwind's blue-500 */
+}
+
+.text-green-500 {
+  stroke: green; /* Tailwind's blue-500 */
+}
+
+.text-checked {
+  stroke: #755ae2;
+}
+
+.circular-progress::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  background-color: transparent;
+  background-image: conic-gradient(orange, orange var(--count), transparent var(--count));
+  z-index: -100;
+  border-radius: 21.5px;
 }
