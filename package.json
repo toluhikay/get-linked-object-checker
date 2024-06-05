@@ -13,6 +13,7 @@
     "@tensorflow/tfjs": "^4.20.0",
     "axios": "^1.7.2",
     "brightness": "^3.0.0",
+    "chokidar": "^3.6.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "internet-speed-checker": "^0.2.1",

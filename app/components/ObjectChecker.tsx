@@ -63,24 +63,6 @@ const ObjectChecker = () => {
   const audioContextRef = useRef(null);
   const mediaStreamRef = useRef(null);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get("/api/brightness", {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
-        setScreenBrightness(parseFloat(response?.data?.message) * 100);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getData();
-    // Fetch current brightness from the server
-  }, []);
-
   const webcamRef = useRef<any | null>(null);
 
   const [offVideo, setOffVideo] = useState(false);
@@ -124,6 +106,24 @@ const ObjectChecker = () => {
     runCoco();
     // navigator.mediaDevices.getUserMedia({ audio: false });
   }, [offVideo, isRecording, object]);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get("/api/brightness", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        setScreenBrightness(parseFloat(response?.data?.message) * 100);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+    // Fetch current brightness from the server
+  }, [object]);
 
   return (
     <section className="w-full py-2 flex flex-col items-start gap-[2rem] ">
